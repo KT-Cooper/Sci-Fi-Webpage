@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Oxanium, sans-serif;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 0 0 0.75rem black;
+    place-items: center;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background: radial-gradient(#e949e9 0%, #9221ca 35%, #00e3ef 90%);
+    background-size: 600% 600%;
+    animation: gradient 60s ease-in-out infinite;
+    overflow: hidden;
+    display: grid;
+    grid-template: auto / auto;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    grid-area: 1 / 1 / 1 / 1;
+    display: grid;
+    grid-template: 10fr auto 1em auto 10fr / auto;
+    justify-content: space-around;
+}
+
+header {
+    mix-blend-mode: normal;
+    padding: 2rem 5rem;
+    box-sizing: border-box;
+    grid-area: 2 / 1 / 2 / 1;
+    text-align: center;
+    justify-content: space-around;
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: 3rem;
+}
+
+p {
+  font-size: 0.5rem;
+  letter-spacing: 0.5rem;
+}
+
+form {
+    mix-blend-mode: normal;
+    box-sizing: border-box;
+    display: grid;
+    padding: 3rem;
+    grid-area: 4 / 1 / 4 / 1;
+    grid-template: auto auto auto/ auto;
+}
+
+input {
+    background-color: rgba(50, 42, 98, 0.75);
+    border: 0.125rem solid rgba(255, 255, 255, 0.75);
+    border-radius: 0.5em;
+    padding: 1em 3em;
+    mix-blend-mode: overlay;
+    margin: auto 2em;
+    width: max-content;
+}
+
+input:hover, input:focus {
+    box-shadow: 0 0 0.5rem 0.25rem rgba(240, 180, 240, 0.6) inset;
+}
+
+.container {
+    background-color: rgba(103, 83, 255, 0.334);
+    mix-blend-mode: hard-light;
+    margin: 1rem 1rem;
+    border-radius: 1rem;
+    border: 0.125rem solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 2rem 1rem rgba(240, 209, 255, 0.23) inset;
+}
+
+.form-input {
+    margin: 2rem;
+}
+
+#background {
+    width: 100%;
+    height: 100%;
+    background-size: 40px 40px;
+    background-image:
+        linear-gradient(to right, rgba(255, 235, 255, 0.125) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 235, 255, 0.125) 1px, transparent 1px);
+    mix-blend-mode: color-dodge;
+    opacity: 0.75;
+    grid-area: 1 / 1 / 1 / 1;
+}
+
+#canvas {
+    width: 100%;
+    height: 100%;
+    opacity: 0.75;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    25% {
+        background-position: 100% 50%
+    }
+    50% {
+        background-position: 50% 50%;
+    }
+    75% {
+        background-position: 50% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+@font-face {
+    font-family: Oxanium;
+    src: url(./fonts/Oxanium-Light.ttf);
+}
